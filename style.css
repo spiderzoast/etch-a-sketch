@@ -7,4 +7,14 @@
 
 .container {
   display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container div {
+  flex: auto; 
+  width: 6.25%;
+  height: 6.25%;
+  outline: 1px solid black;
 }
