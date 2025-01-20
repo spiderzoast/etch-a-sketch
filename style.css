@@ -5,17 +5,43 @@
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
+body {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.container div {
-  flex: auto; 
-  width: 6.25%;
-  height: 6.25%;
+/* Reset Button */
+
+button {
+  background-color: #e7e7e7;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow border */
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Box */
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
+  outline: 2px solid black;
+}
+
+.game-container div {
+  flex: auto;
   outline: 1px solid black;
 }
 
