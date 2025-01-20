@@ -46,7 +46,3 @@ button:hover {
   flex: auto;
   outline: 1px solid black;
 }
-
-.cell-hovered {
-  background-color: grey;
-}

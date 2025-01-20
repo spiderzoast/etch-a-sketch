@@ -1,7 +1,7 @@
 const gameContainer = document.querySelector(".game-container");
 const btn = document.querySelector("button");
 
-createGrid(16);
+createGrid(32);
 
 btn.addEventListener("click", () => {
   const input = prompt("Enter a number from 1 to 100:");
@@ -27,7 +27,7 @@ function createSquare(gridSize) {
   newCell.classList.add("cell");
   newCell.setAttribute("style", `width: ${pixelSize}px; height: ${pixelSize}px`);
   newCell.addEventListener("mouseover", () => {
-    newCell.classList.add("cell-hovered");
+    newCell.style.backgroundColor = getRandomColor();
   });
   gameContainer.appendChild(newCell);
   return;
@@ -49,3 +49,9 @@ function isNaturalNumberBetween1And100 (num) {
   return Number.isInteger(num) && num >= 1 && num <= 100;
 }
 
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
